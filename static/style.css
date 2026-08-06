@@ -1,0 +1,35 @@
+body {
+    font-family: sans-serif;
+    max-width: 700px;
+    margin: 40px auto;
+    line-height: 1.6;
+    padding: 0 20px;
+}
+.layout {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+}
+.sidebar {
+    width: 220px;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    overflow-y: auto;
+}
+.content {
+    flex: 1;
+    padding: 20px 40px;
+    overflow-y: auto;
+    line-height: 1.6;
+}
+.codehilite {
+    background: #272822;
+    padding: 12px;
+    border-radius: 6px;
+    overflow-x: auto;
+}
+.codehilite pre {
+    margin: 0;
+    color: #f8f8f2;
+}
