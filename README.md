@@ -1,5 +1,5 @@
 # Dynamic Markdown Documentation Portal
-
+# by - Arnab Kumar roy karjee
 ## Run it
 1. `python -m venv env` then activate it
 2. `pip install -r requirements.txt`
