@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}New Doc{% endblock %}
+{% block content %}
+    <h1>New Doc</h1>
+    <form method="post" action="/admin/new" class="admin-form">
+        <input type="text" name="filename" placeholder="filename (no .md)" required>
+        <textarea name="content" rows="16" placeholder="Markdown content..."></textarea>
+        <button type="submit" class="btn btn-primary">Create</button>
+    </form>
+{% endblock %}

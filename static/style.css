@@ -1,9 +1,8 @@
 body {
     font-family: sans-serif;
-    max-width: 700px;
-    margin: 40px auto;
     line-height: 1.6;
-    padding: 0 20px;
+    margin: 0;
+    padding: 0;
 }
 .layout {
     display: flex;
@@ -23,6 +22,13 @@ body {
     overflow-y: auto;
     line-height: 1.6;
 }
+
+.content > * {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .codehilite {
     background: #272822;
     padding: 12px;
@@ -32,4 +38,89 @@ body {
 .codehilite pre {
     margin: 0;
     color: #f8f8f2;
+}
+
+
+/* Admin panel */
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: #4f8cff;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #3a7ae0;
+}
+
+.btn-danger {
+    background: transparent;
+    color: #e05252;
+    border: 1px solid #e05252;
+}
+
+.btn-danger:hover {
+    background: #e05252;
+    color: white;
+}
+
+.doc-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.doc-table th, .doc-table td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid #333;
+}
+
+.doc-table th {
+    color: #999;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.doc-table .actions {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.doc-table .actions a, .doc-table .actions button {
+    margin-left: 8px;
+}
+
+form.admin-form input,
+form.admin-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 12px;
+    background: #1e1e1e;
+    color: #eee;
+    border: 1px solid #333;
+    border-radius: 6px;
+    font-family: inherit;
+}
+
+form.admin-form textarea {
+    font-family: 'Courier New', monospace;
+    resize: vertical;
 }
