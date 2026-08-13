@@ -1,5 +1,73 @@
 {% extends "base.html" %}
 {% block title %}Docs Home{% endblock %}
 {% block content %}
-    <p>Select a doc from the sidebar.</p>
+    <div class="split-hero">
+        <div class="split-hero-text">
+            <div class="hero-eyebrow">/ documentation engine</div>
+            <h1>Markdown in.<br>A real site out.</h1>
+            <p class="hero-subtitle">
+                No database. No build pipeline. Drop a <code>.md</code> file in a folder
+                and it's live — rendered, routed, and searchable in the sidebar.
+            </p>
+            <div class="hero-actions">
+                <a href="/admin" class="btn btn-primary">Open Admin →</a>
+                <span class="hero-meta">{{ docs|length }} doc{{ 's' if docs|length != 1 else '' }} currently live</span>
+            </div>
+        </div>
+        <div class="split-hero-visual">
+            <div class="terminal">
+                <div class="terminal-bar">
+                    <span class="dot dot-red"></span>
+                    <span class="dot dot-yellow"></span>
+                    <span class="dot dot-green"></span>
+                    <span class="terminal-title">content/guides/setup.md</span>
+                </div>
+                <div class="terminal-body">
+<pre># Setup Guide
+
+Welcome to the **docs**.
+
+<span class="tok-hash"># Step 1</span>
+<span class="tok-kw">Install</span> dependencies:
+
+<span class="tok-code">pip install fastapi</span>
+
+- Fast
+- <span class="tok-em">Simple</span>
+- Yours</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="feature-rows">
+        <div class="feature-row">
+            <div class="feature-row-num">01</div>
+            <div class="feature-row-text">
+                <h3>Write, don't fight tooling</h3>
+                <p>Every doc is just a plain <code>.md</code> file on disk. No CMS login, no export step — edit it in any text editor and it's already live.</p>
+            </div>
+        </div>
+        <div class="feature-row">
+            <div class="feature-row-num">02</div>
+            <div class="feature-row-text">
+                <h3>Built for reading</h3>
+                <p>Dark-mode syntax highlighting on every code block, a distraction-free reading pane, and a sidebar that never gets in the way.</p>
+            </div>
+        </div>
+        <div class="feature-row">
+            <div class="feature-row-num">03</div>
+            <div class="feature-row-text">
+                <h3>Async under the hood</h3>
+                <p>File reads don't block the server — built on FastAPI and async I/O from the ground up, so it stays responsive as your docs grow.</p>
+            </div>
+        </div>
+        <div class="feature-row">
+            <div class="feature-row-num">04</div>
+            <div class="feature-row-text">
+                <h3>Locked-down admin</h3>
+                <p>Add, edit, and delete docs from a built-in panel — authenticated, so only you can touch the source of truth.</p>
+            </div>
+        </div>
+    </div>
 {% endblock %}

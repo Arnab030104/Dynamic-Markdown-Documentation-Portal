@@ -124,3 +124,158 @@ form.admin-form textarea {
     font-family: 'Courier New', monospace;
     resize: vertical;
 }
+ 
+
+
+ /* Split hero */
+.split-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+    padding: 40px 20px 60px;
+    max-width: none;
+}
+
+.hero-eyebrow {
+    font-family: 'Courier New', monospace;
+    color: #4f8cff;
+    font-size: 0.85rem;
+    margin-bottom: 16px;
+    letter-spacing: 0.02em;
+}
+
+.split-hero-text h1 {
+    font-size: 2.6rem;
+    line-height: 1.15;
+    margin: 0 0 16px;
+}
+
+.split-hero-text .hero-subtitle {
+    color: #aaa;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 0 28px;
+    max-width: 440px;
+}
+
+.split-hero-text .hero-subtitle code {
+    background: #2a2a2a;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.hero-meta {
+    color: #666;
+    font-size: 0.85rem;
+}
+
+/* Terminal mock */
+.terminal {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+
+.terminal-bar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 14px;
+    background: #222;
+    border-bottom: 1px solid #333;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot-red { background: #ff5f56; }
+.dot-yellow { background: #ffbd2e; }
+.dot-green { background: #27c93f; }
+
+.terminal-title {
+    margin-left: 8px;
+    color: #888;
+    font-size: 0.8rem;
+    font-family: 'Courier New', monospace;
+}
+
+.terminal-body {
+    padding: 20px;
+}
+
+.terminal-body pre {
+    margin: 0;
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+    color: #d4d4d4;
+    line-height: 1.7;
+    white-space: pre-wrap;
+}
+
+.tok-hash { color: #6a9955; }
+.tok-kw { color: #4f8cff; }
+.tok-code { color: #ce9178; }
+.tok-em { color: #dcdcaa; }
+
+/* Feature rows */
+.feature-rows {
+    border-top: 1px solid #333;
+    max-width: none;
+    padding: 0 20px;
+}
+
+.feature-row {
+    display: flex;
+    gap: 32px;
+    padding: 32px 0;
+    border-bottom: 1px solid #333;
+    align-items: baseline;
+}
+
+.feature-row-num {
+    font-family: 'Courier New', monospace;
+    color: #444;
+    font-size: 1.1rem;
+    min-width: 40px;
+}
+
+.feature-row-text h3 {
+    margin: 0 0 8px;
+    font-size: 1.2rem;
+}
+
+.feature-row-text p {
+    margin: 0;
+    color: #999;
+    line-height: 1.6;
+    max-width: 560px;
+}
+
+.feature-row-text code {
+    background: #2a2a2a;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+/* Responsive: stack the split hero on narrow screens */
+@media (max-width: 800px) {
+    .split-hero {
+        grid-template-columns: 1fr;
+    }
+}
